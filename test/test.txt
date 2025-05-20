@@ -1,0 +1,37 @@
+<topic name="recursivitate">
+<category>
+<pattern>^ RECURSIVITATE ^</pattern>
+<tamplate>
+Recursivitatea reprezintă proprietatea unor noțiuni de a se defini prin ele însele.
+</tamplate>
+</category>
+<topic>
+
+
+
+
+
+<reply>
+<text> ^ Recursivitate ^</text>
+<postback>recursivitate</postback>
+</reply>
+
+
+              <button>
+                <text>Intoarcere la grafuri orientate</text>
+                <postback>definitii orientate</postback>
+            </button>
+            <button>
+                <text>Oprire</text>
+                <postback>oprire</postback>
+            </button>
+            <think>
+               <set name ="topic">grafuriorientate</set>
+           </think>
+		   
+		   
+<category>
+<pattern>* sa invat *</pattern>
+<template></template>
+
+</category>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->	
+
+	<category>
+	    <pattern>SALUT</pattern>
+	    <template>Buna. Despre ce vrei sa vorbim?
+	    <button>
+			<text>FIZICA</text>
+            <postback>fizica</postback>
+        </button>
+        
+        <button>
+          <text>CHIMIE</text>
+          <postback>chimie</postback>
+        </button>
+        <think>
+           <set name = "topic">domeniufizicachimie</set>
+        </think>
+        </template>
+	</category>
+
+<topic name="domeniufizicachimie">
+
+	<category>
+		<pattern>^ FIZICA ^</pattern>
+		<template>Ce subdomeniu te-ar interesa?
+			<reply>
+				<text>MECANICA</text>
+				<postback>mecanica</postback>
+			</reply>
+			<reply>
+				<text>ELECTRICITATE</text>
+				<postback>electricitate</postback>
+			</reply>
+			<think>
+				<set name = "topic">fizica</set>
+			</think>    
+		</template>
+	</category>
+	<category>
+		<pattern>^ CHIMIE ^</pattern>
+		<template>Ce subdomeniu te-ar interesa?
+			<button>
+			  <text>ORGANICA</text>
+			  <postback>organica</postback>
+			</button>
+			<button>
+			  <text>ANORGANICA</text>
+			  <postback>anorganica</postback>
+			</button>
+			<think>
+				<set name = "topic">chimie</set>
+			</think>    
+		</template>
+    </category>
+</topic>
+
+<topic name="fizica">
+    <category>
+        <pattern>^ MECANICA ^</pattern>
+        <template>Mecanica este o ramură a fizicii care studiază modul în care se schimbă poziția corpurilor.
+            <button>
+                <text>Doriti sa reveniti la inceput?</text>
+                <postback>SALUT</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>^ ELECTRICITATE ^</pattern>
+        <template>Electricitatea este un set de fenomene fizice asociate cu prezența și deplasarea sarcinilor electrice.
+            <button>
+                <text>Doriti sa reveniti la inceput?</text>
+                <postback>SALUT</postback>
+            </button>
+        </template>
+    </category>
+</topic>
+
+<topic name="chimie">
+    <category>
+        <pattern>^ ORGANICA ^</pattern>
+        <template>
+            <card>
+                <title>Chimie Organica</title>
+                <image>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/5-alpha-dihydroprogesterone.png/246px-5-alpha-dihydroprogesterone.png</image>
+                <button>
+                    <text>
+                        <link>
+                            <text>Detalii</text>
+                            <url>https://ro.wikipedia.org/wiki/Chimie_organic%C4%83</url>
+                        </link> 
+                    </text>
+                </button>
+            </card>
+            <button>
+                <text>Doriti sa reveniti la inceput?</text>
+                <postback>SALUT</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>^ ANORGANICA ^</pattern>
+        <template>Chimia anorganică studiază proprietățile elementelor chimice și a compușilor anorganici si interpreteaza compușii anorganici prin modele calitative ale mecanicii cuantice.
+			<button>
+                <text>Doriti sa reveniti la inceput?</text>
+                <postback>SALUT</postback>
+            </button>
+        </template>
+    </category>
+</topic>
+</aiml>

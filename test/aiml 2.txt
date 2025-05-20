@@ -1,0 +1,59 @@
+ <category>
+        <pattern>Grafuri Orientate</pattern>
+        <template>
+            Ce ai dori sa afli despre grafurile orientate?
+             <button>
+            <text>Definitie Grafuri Orientate</text>
+            <postback></postback>
+        </button>
+        <button>
+            <text>Drum</text>
+            <postback>grafuri</postback>
+        </button>
+        <button>
+            <text>Lungime lant</text>
+            <postback>grafuri</postback>
+        </button>
+        <button>
+            <text>Graf conex</text>
+            <postback>grafuri</postback>
+        </button>
+        <button>
+            <text>Componenta conexa</text>
+            <postback>grafuri</postback>
+        </button>
+        <think>
+            <set name="topic">grafuriorientate</set>
+        </think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Grafuri Neorientate</pattern>
+        <template>
+        Ce ai dori sa afli despre grafurile neorientate?
+        <button>
+            <text>Definite Grafuri Neorientate</text>
+            <postback>Grafuri</postback>
+        </button>
+        <button>
+            <text>Varf Izolat</text>
+            <postback>Grafuri</postback>
+        </button>
+          <button>
+            <text>Varf Terminal</text>
+            <postback>Grafuri</postback>
+        </button>
+          <button>
+            <text>Gradul Varfurilor</text>
+            <postback>Grafuri</postback>
+        </button>
+          <button>
+            <text>Graf Complet</text>
+            <postback>Grafuri</postback>
+        </button>
+        <think>
+            <set name="topic">grafurineorientate</set>
+        </think>
+        </template>
+    </category>
